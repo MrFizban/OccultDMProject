@@ -1,0 +1,31 @@
+ List<Widget> returnList() {
+    Map<int, String> initiative = {1:'Mirah',2:'Ezra',3:'Emily', 4:'JD'};
+    List<Widget> temp = [];
+    temp.add(Divider());
+    initiative.forEach((key, value) {
+      temp.add(Container(
+          height: 40,
+          width: 200,
+          child: Row(
+            children: [
+              Container(
+                width: 5,
+              ),
+              Container(
+                  height: 40,
+                  width: 40,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 5),
+                      borderRadius: BorderRadius.all(Radius.circular(8))),
+                  child: Text(key.toString())),
+              Container(
+                width: 8,
+              ),
+              Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text(value.toString())),
+            ],
+          )));
+      temp.add(Divider());
+    });
